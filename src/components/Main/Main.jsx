@@ -1,26 +1,21 @@
 import React, { Component } from 'react'
-import ProductList from './ProductList'
-import Chefs from './Chefs'
-import About from './About'
-import Contact from './Contact'
-import Delivery from './Devivery'
+import Home from './Home'
+import Form from './Form'
+import Card from './Card'
+import ListNews from './ListsNews'
 import { Route,Routes } from 'react-router-dom'
-import Topics from './Topics'
+
 
 export class Main extends Component {
   render() {
     return (
       <main>
-          <h1>Futura web - Exploding Cakes!!</h1>
-          <p>Esto es el main</p>
+          <h1>Breaking News!!</h1>
           <Routes>
-          <Route element={<ProductList/>} path='/'/>
-          <Route element={<Chefs/>} path='/listachefs'/>
-          <Route element={<About/>} path='/about'/>
-          <Route element={<Delivery/>} path='/delivery'/>
-          <Route element={<Topics/>} path='/topics'/>
-          <Route element={<Contact/>} path='/contact'/>
-
+          <Route element={<Home/>} path='/'/>
+          <Route element={<Form/>} path='/form'/>
+          <Route element={<ListNews/>} path='/listnews'/>
+          <Route element={<Card/>} path='/card'/>
           </Routes>
           
       </main>
