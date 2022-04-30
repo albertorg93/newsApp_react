@@ -1,5 +1,5 @@
 // import './App.css';
-import Header from './components/Header'
+
 import Main from './components/Main'
 import Footer from './components/Footer'
 import { BrowserRouter} from 'react-router-dom';
@@ -7,10 +7,11 @@ import './styles/styles.scss'
 // import { userState, useState } from 'react';
 import { useState } from 'react';
 import {userContext} from './context/userContext';
+import Head from './components/Head';
 
 function App() {
   
-const [user, setUser] = useState("Alvaru"); //hook UseState
+const [user, setUser] = useState(""); //hook UseState
 
 //login
 const login = (name) =>{
@@ -31,7 +32,7 @@ const data = {
     <div className="App">
       <BrowserRouter>
       <userContext.Provider value={data}>
-      <Header/>
+      <Head/>
       <Main/>
       </userContext.Provider>
       </BrowserRouter>
