@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import Home from './Home'
 import Form from './Form'
 import Card from './Card'
-import ListNews from './ListsNews'
+import ListNews from './ListNews'
 import { Route,Routes } from 'react-router-dom'
 
 
 export class Main extends Component {
   render() {
     return (
-      <main>
+      <main className='menup'>
           <h1>Breaking News!!</h1>
           <Routes>
           <Route element={<Home/>} path='/'/>

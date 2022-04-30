@@ -23,7 +23,7 @@ class NewsItem extends Component {
             Noticia:{notice}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Descricion:{description}€
+            Descripcion:{description}
           </Typography>
           </CardContent>
           <CardActions>

@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import NewsItem from './NewsItem'
-import dataCakes from './news.json'
+import defaultNews from './news.json'
 
 class Form extends Component {
   constructor(props) {
     super(props)
   
     this.state = {
-       cakes: dataCakes,  //[] de cakes de la "bbdd"
+       news: defaultNews,  //[] de cakes de la "bbdd"
        lastCake:{}
     }
   }
@@ -26,19 +26,19 @@ class Form extends Component {
     this.setState({lastCake: newCake})
   
     //añadir al estado cakes el nuevo cake
-     this.setState({cakes:[...this.state.cakes,newCake]})
+     this.setState({news:[...this.state.news,newCake]})
   
   }
   
-  paintCakes= () => this.state.cakes.map((cake,i)=><NewsItem data={cake} key={i} remove={()=>this.removeCake(i)}/>)
+  paintNews= () => this.state.news.map((cake,i)=><NewsItem data={cake} key={i} remove={()=>this.removeNew(i)}/>)
   
-  removeAllNews = () =>  this.setState({cakes:[]})
+  removeAllNews = () =>  this.setState({news:[]})
   
-  resetNews = () =>  this.setState({cakes:dataCakes})
+  resetNews = () =>  this.setState({news:defaultNews})
   
-  removeCake = (i) => {
-   const remainingCakes = this.state.cakes.filter((cake,j)=> i!==j)
-  this.setState({cakes:remainingCakes})
+  removeNew = (i) => {
+   const remainingNews= this.state.news.filter((cake,j)=> i!==j)
+  this.setState({news:remainingNews})
   }
 
   render() {
@@ -61,11 +61,10 @@ class Form extends Component {
     </form>
     
     <div className='cake-list'>
-    {this.paintCakes()}
+    {this.paintNews()}
     </div>
      
      <div className='buttons'>
-     <button onClick={this.addNew}>Click and add New</button>
      <button onClick={this.removeAllNews}>Delete News</button>
      <button onClick={this.resetNews}>Reset default News</button>
     </div>
