@@ -13,15 +13,14 @@ class Form extends Component {
   }
   
   addNew = (event) =>{
-     //const price = prompt("Introduce precio")
-     //const name = prompt("introduce tipo de tarta")
-     //alert(`has añadido:${name} ${price}€ `)
+
     event.preventDefault();
-    const name = event.target.cake.value
-    const price = event.target.price.value
+    const section = event.target.section.value
+    const notice = event.target.notice.value
+    const description = event.target.description.value
     const image = event.target.image.value
   
-    const newCake = {price, name, image};
+    const newCake = {notice, section,description, image};
     
     //añadir al estado lastCake el último Cake
     this.setState({lastCake: newCake})
@@ -43,18 +42,18 @@ class Form extends Component {
   }
 
   render() {
-    let {name,price} = this.state.lastCake;
+    let {section,notice} = this.state.lastCake;
     
     return <div>
 
     <h1>Add new notice</h1>
     <form onSubmit={this.addNew} className='form'>
-      <label htmlFor="cake">Seccion:</label><br/>
-      <input type="text" id="cake" name="cake"/><br/>     
-      <label htmlFor="price">Noticia:</label><br/>
-      <input type="text" id="price" name="price"/><br/>
+      <label htmlFor="section">Section:</label><br/>
+      <input type="text" id="section" name="section"/><br/>     
+      <label htmlFor="notice">Noticia:</label><br/>
+      <input type="text" id="notice" name="notice"/><br/>
       <label htmlFor="description">Descripcion:</label><br/>
-      <input type="textarea" id="description" name="description"/><br/>
+      <textarea  id="description" name="description"/><br/>
       <label htmlFor="image">Image:</label><br/>
       <input type="url" id="image" name="image"/><br/>
      
@@ -70,8 +69,8 @@ class Form extends Component {
      <button onClick={this.removeAllNews}>Delete News</button>
      <button onClick={this.resetNews}>Reset default News</button>
     </div>
-    {name&&price?
-    <p>Last New Added: {name} {price}€</p>
+    {section&&notice?
+    <p>Last New Added: {section} {notice}€</p>
      :""
     }
     

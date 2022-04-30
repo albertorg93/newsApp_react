@@ -1,17 +1,18 @@
 [
-    {"name":"limón",
-     "price":"5",
-     "image": "https://comococer.com/wp-content/uploads/2020/07/receta-tarta-de-limon-thermomix.png"
+    {"section":"Sociedad",
+     "notice":"Dos de cada tres dinosaurios siguen negando su extinción",
+     "description":"Argumentan que no es posible, necesitan más pruebas",
+     "image": "https://i.imgflip.com/23453g.jpg"
     },
-    {"name":"queso",
-        "price":"3",
-        "company": "Eseqesite SL",
-        "image": "https://i.ytimg.com/vi/4iBmo59k8Vc/maxresdefault.jpg"
-    },
-    {"name":"chocolate",
-     "price":"4",
-     "company":"Sargento del queso SA",
-    "image": "https://i.ytimg.com/vi/H7uMpjzyaTU/maxresdefault.jpg"
-    }
+    {"section":"Deportes",
+        "notice":"Nadal gana su 30º Roland Garros",
+        "description":"A la edad de 67 años, el balear vuelve a ganar el torneo, aun con sus problemas de reuma",
+        "image": "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/10/11/16024422872684.jpg"
+       },
+       {"section":"Tecnologia",
+        "notice":"Javascript se actualiza",
+        "description":"Llega la ultimisima actualizacion del sistema operativo, con increibles novedades",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlF6K1EgjD8p9ZG9N0dzmgU-p1e1H_y89E_w&usqp=CAU"
+       }
 ]
 
