@@ -8,7 +8,7 @@ class Form extends Component {
   
     this.state = {
        news: defaultNews,  //[] de cakes de la "bbdd"
-       lastCake:{}
+       lastNew:{}
     }
   }
   
@@ -20,17 +20,17 @@ class Form extends Component {
     const description = event.target.description.value
     const image = event.target.image.value
   
-    const newCake = {notice, section,description, image};
+    const newNotice = {notice, section,description, image};
     
-    //añadir al estado lastCake el último Cake
-    this.setState({lastCake: newCake})
+    //añadir al estado lastNew la ultima new
+    this.setState({lastNew: newNotice})
   
-    //añadir al estado cakes el nuevo cake
-     this.setState({news:[...this.state.news,newCake]})
+    //añadir al estado news la nueva new
+     this.setState({news:[...this.state.news,newNotice]})
   
   }
   
-  paintNews= () => this.state.news.map((cake,i)=><NewsItem data={cake} key={i} remove={()=>this.removeNew(i)}/>)
+  paintNews= () => this.state.news.map((notice,i)=><NewsItem data={notice} key={i} remove={()=>this.removeNew(i)}/>)
   
   removeAllNews = () =>  this.setState({news:[]})
   
@@ -42,12 +42,12 @@ class Form extends Component {
   }
 
   render() {
-    let {section,notice} = this.state.lastCake;
+    let {section,notice} = this.state.lastNew;
     
     return <div>
 
-    <h1>Add new notice</h1>
-    <form onSubmit={this.addNew} className='form'>
+    <h1>Add a new notice</h1>
+    <form onSubmit={this.addNew} className='formularioalta'>
       <label htmlFor="section">Section:</label><br/>
       <input type="text" id="section" name="section"/><br/>     
       <label htmlFor="notice">Noticia:</label><br/>
@@ -69,7 +69,7 @@ class Form extends Component {
      <button onClick={this.resetNews}>Reset default News</button>
     </div>
     {section&&notice?
-    <p>Last New Added: {section} {notice}€</p>
+    <p>Last New Added: {section} {notice}</p>
      :""
     }
     

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid';
-// const API_KEY = process.env.REACT_APP_API_KEY;
+// const API_KEY = {process.env.REACT_APP_API_KEY};
 // console.log(process.env);
 // console.log(API_KEY)
 // import './Topics.css'
@@ -16,10 +16,10 @@ const ListNews = () => {
         const res = await axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${value}&api-key=KM4DZJETbYqSiZaQd0YhufZdGle622LY`);
         const json = res.data;
         console.log(json.response.docs)
-        // Guarda en el array de posts el resultado. Procesa los datos
-        // setPosts(json.response.map(c => c));
-        setPosts(json.response.docs);
-        console.log("holaaadmslkmklasdmkl")
+        let arr = [];
+        arr = json.response.docs
+        const notices = arr.slice(0,5)
+        setPosts(notices);
         
       }catch(e){
         setPosts([]) // No pintes nada
@@ -33,7 +33,7 @@ const ListNews = () => {
     setValue(e.target.topic.value) // Modificando el estado de Value
   };
   return    <section>
-              <h1>Búsqueda por seccion de noticias</h1>
+              <h2 className='busqueda'>Búsqueda por seccion de noticias</h2>
               <form onSubmit={handleSubmit}>
                 <input className='searcher' name="topic"/>
               </form>

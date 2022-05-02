@@ -12,8 +12,8 @@ class NewsItem extends Component {
   render() {
     const {section,notice,description,image} = this.props.data
     return (
-<section>
-        <Card sx={{ width: 500, margin:3 }}>
+<section className="seccionnoticias">
+        <Card sx={{ width: 350, margin:3, border:3, borderRadius: 5 }}>
           <CardMedia component="img" height="140" image={image}alt="cake"/>
           <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -27,8 +27,7 @@ class NewsItem extends Component {
           </Typography>
           </CardContent>
           <CardActions>
-            <Button onClick={this.props.remove}>Borrar</Button>
-            <Button size="small">❤</Button>
+            <Button onClick={this.props.remove } sx={{ marginLeft: 15, fontSize: 15 }}>Borrar</Button>
           </CardActions>
         </Card>
         

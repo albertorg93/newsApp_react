@@ -4,29 +4,37 @@
 
 .notices{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 
 .topics{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
     margin-left: auto;
     margin-right: auto;
     border: 3px solid rgb(1, 1, 1);
     margin: 10px;
-    max-width: 50%;
+    max-width: 400px;
     min-height: 250px;
     border-radius: 15px;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    background-color: rgb(255, 206, 188);
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 
 .searcher{
     border: 2px solid black;
     border-radius: 3px;
+    background-color: rgb(220, 220, 220);
 }
