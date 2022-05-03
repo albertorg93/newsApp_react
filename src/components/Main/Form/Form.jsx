@@ -74,8 +74,8 @@ class Form extends Component {
     </div>
      
      <div className='buttons'>
-     <button onClick={this.removeAllNews}>Delete News</button>
-     <button onClick={this.resetNews}>Reset default News</button>
+     <button onClick={this.removeAllNews} className='borrarnews'>Delete News</button>
+     <button onClick={this.resetNews} className='resetnews'>Reset default News</button>
     </div>
     {section&&notice?
     <p>Last New Added: {section} {notice}</p>

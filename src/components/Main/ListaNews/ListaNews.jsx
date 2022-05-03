@@ -54,7 +54,7 @@ class ListaNews extends Component {
                          <p key={uuidv4()}>
                         {post.abstract}
                          </p>
-                        <a href={post.web_url}>Link to notice</a>
+                        <a href={post.web_url} key={uuidv4()}>Link to notice</a>
                         <p key={uuidv4()}>Font:
                         {post.source}
                          </p>

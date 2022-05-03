@@ -41,12 +41,11 @@ class Home extends Component {
 
     return <div>
     <h1>Contacto</h1>
-    <form onSubmit={this.login}>
+    <form onSubmit={this.login} className="formulariousuario">
           <label htmlFor="user">Nombre usuario:</label><br/>
           <input type="text" id="user" name="user"/><br/>
           <input type="submit" value="Enviar"/>
         </form>
-        <p>Usuario introducido: {this.state.user?this.state.user:"--"}</p>
   </div>;;
   }
 }

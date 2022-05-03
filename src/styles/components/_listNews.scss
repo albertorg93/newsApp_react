@@ -18,18 +18,24 @@
     // align-items: center;
     margin-left: auto;
     margin-right: auto;
-    border: 3px solid rgb(1, 1, 1);
+    border: 5px solid rgb(1, 1, 1);
     margin: 10px;
     max-width: 400px;
     min-height: 250px;
     border-radius: 15px;
     // flex-wrap: wrap;
     background-color: rgb(255, 206, 188);
+    -webkit-box-shadow: 14px 2px 46px 10px rgba(79,37,53,1);
+    -moz-box-shadow: 14px 2px 46px 10px rgba(79,37,53,1);
+    box-shadow: 14px 2px 46px 10px rgba(79,37,53,1);
+    background-color: rgb(246, 169, 139);
+
 }
 
 p{
-    font-family: 'Courier New', Courier, monospace;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+    font-size: 17px;
 }
 
 
