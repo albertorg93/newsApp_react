@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid';
-// const API_KEY = {process.env.REACT_APP_API_KEY};
-// console.log(process.env);
-// console.log(API_KEY)
-// import './Topics.css'
+
 const ListNews = () => {
   const [value, setValue] = useState("pizza"); // Para guardar el dato a buscar
   const [posts, setPosts] = useState([]); // Para guardar los posts
@@ -13,7 +10,7 @@ const ListNews = () => {
     async function fetchData() {
       try{
         // Petición HTTP
-        const res = await axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${value}&api-key=KM4DZJETbYqSiZaQd0YhufZdGle622LY`);
+        const res = await axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${value}&api-key=${process.env.REACT_APP_API_KEY}`);
         const json = res.data;
         console.log(json.response.docs)
         let arr = [];

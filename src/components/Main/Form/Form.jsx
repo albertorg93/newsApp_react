@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NewsItem from './NewsItem'
 import defaultNews from './news.json'
+import { Navigate } from "react-router-dom";
 
 class Form extends Component {
   constructor(props) {
@@ -8,7 +9,8 @@ class Form extends Component {
   
     this.state = {
        news: defaultNews,  //[] de cakes de la "bbdd"
-       lastNew:{}
+       lastNew:{},
+       redirect: false
     }
   }
   
@@ -27,6 +29,8 @@ class Form extends Component {
   
     //añadir al estado news la nueva new
      this.setState({news:[...this.state.news,newNotice]})
+
+     this.setState({redirect: true})
   
   }
   
@@ -43,7 +47,12 @@ class Form extends Component {
 
   render() {
     let {section,notice} = this.state.lastNew;
-    
+    const { redirect } = this.state;
+
+    if (redirect) {
+      return <Navigate to='/list'/>
+    }
+
     return <div>
 
     <h1>Add a new notice</h1>
@@ -57,7 +66,7 @@ class Form extends Component {
       <label htmlFor="image">Image:</label><br/>
       <input type="url" id="image" name="image"/><br/>
      
-      <input type="submit" value="Send"/>
+      <input type="submit" value="Create new"/>
     </form>
     
     <div className='cake-list'>

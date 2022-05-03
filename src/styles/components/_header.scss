@@ -14,6 +14,8 @@
         }
         & > .user{
             display: flex;
+            flex-direction: column;
+            max-width: 80px;
             & > p {
                 color: $text-color;
                 margin-right: $spacing-md;

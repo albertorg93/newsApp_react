@@ -1,10 +1,12 @@
 @import '../utils/variables.scss';
 
 footer {
-    background-color: $menu-color;
+    background-color: rgb(123, 127, 123);
     color: $text-color;
     bottom: 0;
     position:absolute;
     min-width: 414px;
+    margin-top: 100px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 
 }

@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import Home from './Home'
 import Form from './Form'
 import Card from './Card'
-import ListNews from './ListNews'
+// import ListNews from './ListNews'
+import ListaNews from './ListaNews'
 import { Route,Routes } from 'react-router-dom'
 
 
@@ -14,7 +15,8 @@ export class Main extends Component {
           <Routes>
           <Route element={<Home/>} path='/'/>
           <Route element={<Form/>} path='/form'/>
-          <Route element={<ListNews/>} path='/listnews'/>
+          {/* <Route element={<ListNews/>} path='/listnews'/> */}
+          <Route element={<ListaNews/>} path='/list'/>
           <Route element={<Card/>} path='/card'/>
           </Routes>
           

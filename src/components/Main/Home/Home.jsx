@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Navigate } from "react-router-dom";
 import {userContext} from '../../../context/userContext';
 
 class Home extends Component {
@@ -10,7 +11,8 @@ class Home extends Component {
     super(props)
   
     this.state = {
-       user:""
+       user:"",
+       redirect: false
     }
   }
 
@@ -24,11 +26,19 @@ class Home extends Component {
  // const loginUser = this.context.login //leer la funcion login
  // loginUser(user) 
  this.context.login(user);
+ this.setState({redirect: true})
 }
 
 
-
   render() {
+   
+   const { redirect } = this.state;
+  
+   if(redirect) {
+     return <Navigate to='/form'/>
+   }
+
+
     return <div>
     <h1>Contacto</h1>
     <form onSubmit={this.login}>
