@@ -1,10 +1,23 @@
 
+.formulariousuario{
+    margin-top: 25%;
+    border: 5px solid rgb(33, 12, 12);
+    border-radius: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    min-width: 200px;
+    box-shadow: 21px 27px 28px 1px rgba(207,91,91,0.81);
+-webkit-box-shadow: 21px 27px 28px 1px rgba(207,91,91,0.81);
+-moz-box-shadow: 21px 27px 28px 1px rgba(207,91,91,0.81);
+background-color: rgb(226, 152, 99);
+}
+
 
 .formulariousuario input{
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 3px;
     background-color: rgb(218, 218, 218);
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .formulariousuario textarea{
@@ -12,4 +25,21 @@
     border-radius: 3px;
     background-color: rgb(218, 218, 218);
     margin-bottom: 20px;
+}
+
+.formulariousuario label{
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.submit{
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.valor{
+    font-size: 20px;
+    min-width: 100px;
+    font-family: 'Times New Roman', Times, serif;
 }

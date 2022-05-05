@@ -1,13 +1,17 @@
 @import '../utils/mixins.scss';
 
 .allnews{
-    background-color: #f6a98b;
+    background-color: rgb(226, 152, 99);
     border: 5px solid #010101;
     border-radius: 15px;
-    box-shadow: 14px 2px 46px 10px #80475d;
+    box-shadow: 21px 27px 28px 1px rgba(207,91,91,0.81);
+-webkit-box-shadow: 21px 27px 28px 1px rgba(207,91,91,0.81);
+-moz-box-shadow: 21px 27px 28px 1px rgba(207,91,91,0.81);
+background-color: rgb(226, 152, 99);
     margin: 20px;
     max-width: 400px;
     min-height: 400px;
+    min-width: 400px;
 }
 
 

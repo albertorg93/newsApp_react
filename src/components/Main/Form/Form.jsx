@@ -63,7 +63,7 @@ class Form extends Component {
       <label htmlFor="notice">Noticia:</label><br/>
       <input type="text" id="notice" name="notice"/><br/>
       <label htmlFor="description">Descripcion:</label><br/>
-      <textarea  id="description" name="description"/><br/>
+      <textarea id="description" name="description"/><br/>
       {/* <label htmlFor="image">Image:</label><br/>
       <input type="url" id="image" name="image"/><br/> */}
      
