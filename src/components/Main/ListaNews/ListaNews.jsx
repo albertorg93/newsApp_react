@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { v4 as uuidv4 } from 'uuid';
+// import { Card } from '@mui/material';
+import Card from './Card'
 
 class ListaNews extends Component {
 
@@ -8,7 +9,8 @@ class ListaNews extends Component {
         super(props);
         this.state = { 
           value: "basketball",
-          News: this.props.defaultList
+          News: this.props.defaultList,
+          allNews: []
         }
        
     }
@@ -22,7 +24,8 @@ class ListaNews extends Component {
         this.setState({
           News: notices
       })
-   
+           const noticias = [...this.state.News,...this.props.data]
+           this.setState({allNews:noticias})
     }
 
 
@@ -38,29 +41,23 @@ class ListaNews extends Component {
     this.setState({News: this.state.notices})
     }
 
-    
+    removeNew = (i) =>{
+      const remainingNews = this.state.allNews.filter((news,j)=>i!==j)
+      console.log(remainingNews);
+      this.setState({allNews:remainingNews})
+    }
 
- 
+
     render() {
-
+  console.log(this.state.News,"esto son las news")
         return (
             
-            <section>
+   <section>
             <h2 className='busqueda'>Sección de noticias</h2>
             {this.state.News.length!==0?
-                     <div className='notices'>
-                      {this.state.News.map(post => (
-                         <div className='topics'>
-                         <p key={uuidv4()}>
-                        {post.abstract}
-                         </p>
-                        <a href={post.web_url} key={uuidv4()}>Link to notice</a>
-                        <p key={uuidv4()}>Font:
-                        {post.source}
-                         </p>
-                        </div>
-                        
-                            ))}
+                     <div className='prueba'>
+                     {this.state.allNews.map((post,i) =><Card data={post} key={i} remove={()=>this.removeNew(i)}/>
+                     )}
                               </div>
                               :""
             }

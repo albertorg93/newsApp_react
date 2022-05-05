@@ -8,7 +8,7 @@ class Nav extends Component {
     <Link to="/form" className="nav__element">Create a notice</Link>
     {/* <Link to="/listnews" className="nav__element">List News</Link> */}
     <Link to="/list" className="nav__element">Lista News</Link>
-    <Link to="/card" className="nav__element">Notice Detail</Link>
+    {/* <Link to="/card" className="nav__element">Notice Detail</Link> */}
     
   </div>;;
   }
