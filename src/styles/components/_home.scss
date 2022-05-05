@@ -43,3 +43,13 @@ background-color: rgb(226, 152, 99);
     min-width: 100px;
     font-family: 'Times New Roman', Times, serif;
 }
+
+
+@media screen and (min-width: 900px) {
+    .formulariousuario{
+        margin-top: 40px;
+        max-width: 450px;
+        margin-left: 37%;
+        min-height: 200px;
+    }
+  }
