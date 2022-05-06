@@ -51,3 +51,5 @@ class Home extends Component {
 }
 
 export default Home;
+
+//console.log(user)
